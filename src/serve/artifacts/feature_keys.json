@@ -1,0 +1,1 @@
+["https", "has_ip", "len_url", "len_host", "len_path", "num_dots_host", "num_hyphen_host", "num_digits_url", "num_query_params", "has_at", "has_frag", "path_depth", "ref_phish_hits", "ref_benign_hits", "ref_ratio"]

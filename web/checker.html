@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Ref-TABMNet Checker</title></head>
+<body>
+  <h3>Ref-TABMNet — URL Checker</h3>
+  <input id="u" placeholder="https://..." style="width:60%">
+  <button id="go">Check</button>
+  <pre id="out"></pre>
+<script>
+const API = "http://127.0.0.1:8000/predict";
+document.getElementById("go").onclick = async () => {
+  const url = document.getElementById("u").value;
+  const r = await fetch(API, {method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify({url})});
+  const j = await r.json();
+  document.getElementById("out").textContent = JSON.stringify(j, null, 2);
+};
+</script>
+</body>
+</html>

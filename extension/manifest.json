@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Ref-TABMNet PhishShield",
+  "version": "1.0",
+  "description": "Warns before opening suspected phishing links using your trained Ref-TABMNet model.",
+  "permissions": ["declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess",
+    "webNavigation",
+    "storage","tabs", "scripting", "activeTab"],
+  "host_permissions": ["http://127.0.0.1:8000/*", "<all_urls>"],
+  "background": { "service_worker": "background.js" },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["interstitial.html", "interstitial.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>⚠️ Suspicious Link Detected</title>
+  <style>
+    body { font-family: Arial, sans-serif; display:flex; align-items:center; justify-content:center; height:100vh; background:#fff5f5; }
+    .card { background:white; padding:28px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.12); width: min(640px, 92vw); text-align:center; }
+    .danger { background:#d9534f; color:white; border:none; border-radius:8px; padding:10px 16px; cursor:pointer; margin:8px;}
+    .ghost { background:#eee; color:#333; border:none; border-radius:8px; padding:10px 16px; cursor:pointer; margin:8px;}
+    code { word-break: break-all; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>⚠️ Suspicious site blocked</h2>
+    <p id="desc">This URL was flagged by Ref-TABMNet.</p>
+    <div>
+      <button id="goBack" class="ghost">Return to safety</button>
+      <button id="proceed" class="danger">Continue anyway</button>
+    </div>
+  </div>
+  <script src="interstitial.js"></script>
+</body>
+</html>
