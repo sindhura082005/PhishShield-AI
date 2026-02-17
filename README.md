@@ -1,8 +1,7 @@
 # 🛡️ PhishShield AI  
 ### Real-Time Phishing URL Detection System (PyTorch + FastAPI)
 
-🚀 **Live Demo:** 
-📄 **API Docs:** http://127.0.0.1:8000/docs#/
+🚀 **Live Demo:** https://phishshield-ai-hqoq.onrender.com/docs
 
 PhishShield AI is an end-to-end machine learning and backend security system designed to detect phishing URLs in real-time.  
 The system leverages engineered URL intelligence features and a deep neural network classifier to provide scalable REST API-based threat detection.
