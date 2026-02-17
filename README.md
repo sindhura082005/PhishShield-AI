@@ -1,22 +1,25 @@
 # 🛡️ PhishShield AI  
 ### Real-Time Phishing URL Detection System (PyTorch + FastAPI)
 
-PhishShield AI is a production-ready phishing URL detection system built using deep learning and feature engineering.  
-It provides real-time classification of URLs as **phishing** or **benign** through a scalable FastAPI backend.
+🚀 **Live Demo:** 
+📄 **API Docs:** http://127.0.0.1:8000/docs#/
 
-This project demonstrates end-to-end ML pipeline development, model optimization, and API deployment for cybersecurity applications.
+PhishShield AI is an end-to-end machine learning and backend security system designed to detect phishing URLs in real-time.  
+The system leverages engineered URL intelligence features and a deep neural network classifier to provide scalable REST API-based threat detection.
+
+Built to simulate production-level cybersecurity infrastructure, the project demonstrates ML model development, performance optimization, and API deployment using FastAPI.
 
 ---
 
-## 🚀 Project Highlights
+## 🚀 Key Engineering Highlights
 
-- Real-time phishing detection API
-- Feature-engineered URL intelligence
-- Deep Neural Network classifier (PyTorch)
-- Class-weighted training for imbalanced data
-- Threshold optimization for improved recall
-- Production-ready FastAPI deployment
-- Modular and scalable architecture
+- Designed and implemented a real-time phishing detection REST API
+- Engineered 15+ lexical and reference-based URL security features
+- Developed a Deep Neural Network classifier using PyTorch
+- Applied class-weighted training to address data imbalance
+- Optimized decision threshold to improve recall for cybersecurity use cases
+- Built scalable backend inference pipeline using FastAPI
+- Structured modular architecture for maintainability and extensibility
 
 ---
 
@@ -122,6 +125,13 @@ POST /predict
   "details": { ... }
 }
 ```
+**Score Interpretation:**  
+The `score` field represents the predicted phishing probability (after sigmoid activation).  
+A decision threshold of **0.39** (optimized during training) is applied for classification:
+- Score ≥ 0.39 → `"phish"`
+- Score < 0.39 → `"benign"`
+
+This threshold was selected to maximize F1-score and improve phishing recall.
 
 ---
 
